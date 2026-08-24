@@ -1,0 +1,50 @@
+/* ── BANNER FOOTER ── */
+.footer-bar {
+	border-top: 1.5px solid var(--border);
+	padding: 1.2rem 2rem;
+	display: flex;
+	justify-content: center;
+	gap: 1.2rem;
+	flex-wrap: wrap;
+}
+
+.stamp {
+	font-family: "DM Mono", monospace;
+	font-size: 0.65rem;
+	color: var(--muted);
+	border: 2px solid var(--border);
+	border-radius: 6px;
+	padding: 0.1rem 0.1rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.linkbuttons {
+	display:flex;
+	overflow:hidden;
+	white-space:nowrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center; 
+}
+
+.linkbuttons__item{
+	flex-shrink: 0;
+	justify-content: center ;
+	animation-duration: 12s ;
+	animation-iteration-count:infinite;
+	animation-name:marquee-content;
+	animation-timing-function:linear;
+}
+
+.linkbuttons img{
+	max-width:none
+}
+
+.linkbuttons:hover .linkbuttons__item{
+	animation-play-state:paused;
+}
+
+@keyframes marquee-content{
+	from {transform: translateX( 0% );}to {transform: translateX( -100% );}
+}

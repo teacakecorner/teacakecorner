@@ -1,0 +1,69 @@
+#navigation {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.navigation-item {
+    padding: 0.1em 0.4em;
+    cursor: pointer;
+}
+
+.navigation-item.active {
+    padding: 0.1em 0.4em;
+    border-radius: 0.3em;
+    background: transparent;
+    background-image: linear-gradient(
+        to right,
+        rgba(204, 138, 0, 0.1),
+        rgba(255, 121, 0, 0.7) 4%,
+        rgba(204, 112, 0, 0.3)
+    );
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    color: white;
+}
+
+.navigation-item:hover {
+    filter: drop-shadow(rgba(255, 121, 0, 0.9) 0 0 4px);
+}
+
+.section {
+    display: none;
+    margin-top: 16px;
+    animation: fadeEffect 0.5s;
+  }
+
+li {
+    margin: 2px 0;
+}
+
+li:has(details) {
+    list-style-type: none;
+}
+
+.answer {
+    margin: 4px;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 121, 0, 0.9);
+    border-radius: 0.8em 0.3em;
+    border-style: dashed;
+}
+
+.answer > p:nth-child(1) {
+    margin-top:0;
+}
+
+.answer > p:nth-last-child(1) {
+    margin-bottom:0;
+}
+
+characterbox {
+  --pixel:2 !important;
+  margin-top: 40px;
+}
+
+li > details {
+  position: relative;
+  left: -14px;
+}
